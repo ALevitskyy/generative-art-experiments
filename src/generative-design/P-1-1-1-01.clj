@@ -2,6 +2,8 @@
   (:require [quil.core :as q]
             [quil.middleware :as m]))
 
+;DESCRIPTION: A grid of rectangles is drawn. The color of each rectangle is determined by its position.
+
 (def width 800)
 (def height 400)
 (defn setup []

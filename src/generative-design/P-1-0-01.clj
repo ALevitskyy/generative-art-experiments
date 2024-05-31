@@ -2,6 +2,8 @@
   (:require [quil.core :as q]
             [quil.middleware :as m]))
 
+;DESCRIPTION: Two rectangles are drawn. The color of the first rectangle is determined by the vertical position of the mouse. The color of the second rectangle is determined by the horizontal position of the mouse. The size of the rectangles is determined by the mouse position.
+
 (defn setup []
   (q/frame-rate 30)
   (q/no-cursor)
