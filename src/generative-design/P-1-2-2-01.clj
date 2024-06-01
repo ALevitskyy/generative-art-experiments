@@ -30,6 +30,7 @@
         image-width (. @image width)
         i (for [x px y py] (* 4 (+ x (* y image-width))))
         ;_ (println (count pixels) (max-seq i))
+        ; Need to figure out why index overflows
         colors (map #(q/color (nth pixels %) (nth pixels (inc %)) (nth pixels (+ 2 %)) (nth pixels (+ 3 %))) i)
         sorted-colors colors
         params (map vector px py sorted-colors)]
