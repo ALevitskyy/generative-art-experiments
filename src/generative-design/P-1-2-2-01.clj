@@ -1,6 +1,8 @@
 (ns generative-design.P-1-2-2-01
   [:require [quil.core :as q]
    [quil.middleware :as m]])
+(use 'infix.macros)
+(refer 'infix.macros :only '[$=])
 
 
 (def image1 "/Users/andriylevitskyy/Desktop/generative_art/generative-art-experiments/src/generative-design/data/P-1-2-2-01/data/pic1.jpg")
@@ -57,5 +59,4 @@
   :key-pressed key-pressed)
 
 
-(def test-vector [1 2 3 4 5 6 7])
-(sort-by Math/sin [1. 2. 3. 4.])
+
