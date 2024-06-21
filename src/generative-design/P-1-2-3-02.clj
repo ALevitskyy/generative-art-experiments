@@ -1,4 +1,4 @@
-(ns generative-design.P-1-2-3-01
+(ns generative-design.P-1-2-3-02
   [:require [quil.core :as q]
    [quil.middleware :as m]])
 
