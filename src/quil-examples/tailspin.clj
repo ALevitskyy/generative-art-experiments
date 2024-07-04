@@ -12,7 +12,10 @@
                                  (range 0 1 (/ n)))]
                       [r 0]))}))
 
-(def speed 0.0003)
+; READ
+
+;(def speed 0.0003)
+(def speed 0.001)
 
 (defn move [dot]
   (let [[r a] dot]

@@ -2,6 +2,8 @@
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as m]))
 
+; READ
+
 (def scale 20)
 
 (defn setup []

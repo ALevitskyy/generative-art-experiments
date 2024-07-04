@@ -1,6 +1,8 @@
 (ns quil-site.examples.waves
   (:require [quil.core :as q :include-macros true]))
 
+; READ
+
 (defn setup []
   (q/frame-rate 30))
 
