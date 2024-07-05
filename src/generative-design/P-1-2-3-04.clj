@@ -4,7 +4,8 @@
    [quil.middleware :as m]])
 
 (def colorCount 20)
-(def alphaValue 80)
+(def alphaValue 75)
+(def DISPLAY-PROB 0.55)
 
 (defn random-float
   ([max] (random-float 0 max))
@@ -48,13 +49,17 @@
   (q/vertex x (+ y h))
   (q/end-shape :close))
 
+(defn random-gradient [x y w h c2]
+  (when (< (random-float 1) DISPLAY-PROB)
+    (gradient-v2 x y w h c2)))
+
 (defn draw-state [state]
   (let
    [noLoop (q/no-loop)
     background (q/background 0)
     randomSeed (q/random-seed (random-float 100000))
     hueValues (interleave-2-vectors (random-vector-len-n 360 colorCount) (constant-vector-len-n 195 colorCount))
-    saturationValues (interleave-2-vectors (constant-vector-len-n 100 colorCount) (random-vector-len-n 100 colorCount))
+    saturationValues (interleave-2-vectors (constant-vector-len-n 100 colorCount) (random-vector-len-n 20 colorCount))
     brightnessValues (interleave-2-vectors (random-vector-len-n 100 colorCount) (constant-vector-len-n 100 colorCount))
     rowCount (int (random-float 5 30))
     rowHeight (/ (q/height) rowCount)
@@ -74,7 +79,7 @@
                      h (repeatedly N #(* 1.5 rowHeight))
                      col2 (map #(q/color (nth hueValues %) (nth saturationValues %) (nth brightnessValues %) alphaValue) index)
                      row-params (map vector x y w h col2)]
-                 (doseq [[x y w h col] row-params] (gradient-v2 x y w h col))))]
+                 (doseq [[x y w h col] row-params] (random-gradient x y w h col))))]
     (doseq [[i parts end-count] params] (draw-row i parts end-count))))
 
 
