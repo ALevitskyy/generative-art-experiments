@@ -16,3 +16,6 @@ pom.xml.asc
 .calva/
 .lsp/
 .DS_Store
+/resources/public/js
+.rebel_readline_history
+figwheel_server.log

@@ -85,8 +85,8 @@
 
 (defn key-pressed [state {:keys [key key-code]}]
   (case key
-    :s (q/save "/Users/andriylevitskyy/Desktop/generative_art/P_1_2_3_03.jpg")
-    :S (q/save "/Users/andriylevitskyy/Desktop/generative_art/P_1_2_3_03.jpg")))
+    :s (q/save "/Users/andriylevitskyy/Desktop/generative_art/P_1_2_3_04.jpg")
+    :S (q/save "/Users/andriylevitskyy/Desktop/generative_art/P_1_2_3_04.jpg")))
 
 
 (defn mouse-released [_ __]
