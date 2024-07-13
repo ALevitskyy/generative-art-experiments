@@ -1,5 +1,6 @@
 (ns website.core
-  (:require [gd.heart :as heart]))
+  (:require [gd.heart :as heart]
+            [gd.P-1-0-01 :as P-1-0-01]))
 
 (defn render-sketch! [text render-fn]
   (let [ul (. js/document getElementById "sketch-list")
@@ -14,7 +15,8 @@
   (doseq [[text render-fn] links]
     (render-sketch! text render-fn)))
 
-(def sketch-registry [["Heart sketch" heart/run-sketch]])
+(def sketch-registry [["Heart sketch" heart/run-sketch]
+                      ["P_1_0_01" P-1-0-01/run-sketch]])
 
 
 (defn ^:export render []
