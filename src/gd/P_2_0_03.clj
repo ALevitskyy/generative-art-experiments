@@ -48,11 +48,12 @@
     (println key)))
 
 (def sketch (atom nil))
-(q/defsketch sketch
-  :host "sketch-canvas"
-  :title "P_2_0_03"
-  :size [width width]
-  :setup setup
-  :draw draw-state
-  :middleware [m/fun-mode]
-  :key-pressed key-pressed)
+(defn run-sketch []
+  (q/defsketch sketch
+    :host "sketch-canvas"
+    :title "P_2_0_03"
+    :size [width width]
+    :setup setup
+    :draw draw-state
+    :middleware [m/fun-mode]
+    :key-pressed key-pressed))

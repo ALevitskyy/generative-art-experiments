@@ -41,13 +41,14 @@
   (reset! random-seed (int (q/random 100000))))
 
 (def sketch (atom nil))
-(q/defsketch sketch
-  :host "sketch-canvas"
-  :title "P-2-1-1-01"
-  :size [width width]
-  :setup setup
-  :draw draw-state
-  :middleware [m/fun-mode]
-  :key-pressed key-pressed
-  :mouse-released mouse-released)
+(defn run-sketch []
+  (q/defsketch sketch
+    :host "sketch-canvas"
+    :title "P-2-1-1-01"
+    :size [width width]
+    :setup setup
+    :draw draw-state
+    :middleware [m/fun-mode]
+    :key-pressed key-pressed
+    :mouse-released mouse-released))
 

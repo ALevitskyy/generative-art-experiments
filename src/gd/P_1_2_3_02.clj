@@ -60,12 +60,13 @@
   (q/start-loop))
 
 (def sketch (atom nil))
-(q/defsketch sketch
-  :title "test"
-  :size [800 800]
-  :setup setup
-  :draw draw-state
-  :middleware [m/fun-mode]
-  :key-pressed key-pressed
-  :mouse-released mouse-released)
+(defn run-sketch []
+  (q/defsketch sketch
+    :title "test"
+    :size [800 800]
+    :setup setup
+    :draw draw-state
+    :middleware [m/fun-mode]
+    :key-pressed key-pressed
+    :mouse-released mouse-released))
 

@@ -96,11 +96,13 @@
                                      (random-vector-len-n 50 100 (/ tileCountX 2)))))))
 
 (def sketch (atom nil))
-(q/defsketch sketch
-  :title "test"
-  :size [1000 1000]
-  :setup setup
-  :draw draw-state
-  :middleware [m/fun-mode]
-  :key-pressed key-pressed)
+
+(defn run-sketch []
+  (q/defsketch sketch
+    :title "test"
+    :size [1000 1000]
+    :setup setup
+    :draw draw-state
+    :middleware [m/fun-mode]
+    :key-pressed key-pressed))
 

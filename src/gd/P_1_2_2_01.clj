@@ -49,14 +49,18 @@
     :7 (reset! sorting-function q/brightness)
     :8 (reset! sorting-function q/saturation)
     :9 (reset! sorting-function identity)))
+
+
 (def sketch (atom nil))
-(q/defsketch sketch
-  :title "test"
-  :size [600 600]
-  :setup setup
-  :draw draw-state
-  :middleware [m/fun-mode]
-  :key-pressed key-pressed)
+
+(defn run-sketch []
+  (q/defsketch sketch
+    :title "test"
+    :size [600 600]
+    :setup setup
+    :draw draw-state
+    :middleware [m/fun-mode]
+    :key-pressed key-pressed))
 
 
 

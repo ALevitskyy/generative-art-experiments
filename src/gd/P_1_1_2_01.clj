@@ -44,10 +44,13 @@
     :s (save-image)
     :S (save-image)))
 (def sketch (atom nil))
-(q/defsketch sketch
-  :title "P_1_1_2_01"
-  :size [width height]
-  :setup setup
-  :draw draw-state
-  :middleware [m/fun-mode]
-  :key-pressed key-pressed)
+
+
+(defn run-sketch []
+  (q/defsketch sketch
+    :title "P_1_1_2_01"
+    :size [width height]
+    :setup setup
+    :draw draw-state
+    :middleware [m/fun-mode]
+    :key-pressed key-pressed))
