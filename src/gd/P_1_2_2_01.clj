@@ -1,4 +1,4 @@
-(ns generative-design.P-1-2-2-01
+(ns gd.P-1-2-2-01
   [:require [quil.core :as q]
    [quil.middleware :as m]])
 (use 'infix.macros)
@@ -49,7 +49,7 @@
     :7 (reset! sorting-function q/brightness)
     :8 (reset! sorting-function q/saturation)
     :9 (reset! sorting-function identity)))
-
+(def sketch (atom nil))
 (q/defsketch sketch
   :title "test"
   :size [600 600]

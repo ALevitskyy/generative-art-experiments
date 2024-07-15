@@ -110,6 +110,7 @@
   (q/start-loop))
 
 
+(def sketch (atom nil))
 (defn run-sketch []
   (q/defsketch sketch
     :host "sketch-canvas"

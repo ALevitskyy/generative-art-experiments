@@ -1,4 +1,4 @@
-(ns generative-design.P-1-2-3-01
+(ns gd.P-1-2-3-01
   [:require [quil.core :as q]
    [quil.middleware :as m]])
 
@@ -95,6 +95,7 @@
                                      (random-vector-len-n 40 100 (/ tileCountX 2))
                                      (random-vector-len-n 50 100 (/ tileCountX 2)))))))
 
+(def sketch (atom nil))
 (q/defsketch sketch
   :title "test"
   :size [1000 1000]

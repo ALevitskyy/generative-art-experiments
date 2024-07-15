@@ -1,4 +1,4 @@
-(ns generative-design.P-1-1-1-01
+(ns gd.P-1-1-1-01
   (:require [quil.core :as q]
             [quil.middleware :as m]))
 
@@ -25,6 +25,7 @@
   (when (or (= key :s) (= key :S))
     (q/save "/Users/andriylevitskyy/Desktop/generative_art/P_1_1_1_01.jpg")))
 
+(def sketch (atom nil))
 (q/defsketch sketch
   :title "P-1-1-1-01"
   :size [width height]

@@ -25,7 +25,7 @@
   (when (or (= key :s) (= key :S))
     (q/save "/Users/andriylevitskyy/Desktop/generative_art/P_2_0_01.jpg")))
 
-
+(def sketch (atom nil))
 (q/defsketch sketch
   :host "sketch-canvas"
   :title "P_2_0_01"

@@ -47,7 +47,7 @@
     :3 (reset! strokeColor (q/color 52 100 71 10))
     (println key)))
 
-
+(def sketch (atom nil))
 (q/defsketch sketch
   :host "sketch-canvas"
   :title "P_2_0_03"

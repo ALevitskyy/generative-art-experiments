@@ -1,4 +1,4 @@
-(ns generative-design.P-1-2-3-02
+(ns gd.P-1-2-3-02
   [:require [quil.core :as q]
    [quil.middleware :as m]])
 
@@ -59,6 +59,7 @@
 (defn mouse-released [_ __]
   (q/start-loop))
 
+(def sketch (atom nil))
 (q/defsketch sketch
   :title "test"
   :size [800 800]

@@ -1,4 +1,4 @@
-(ns generative-design.P-1-1-2-01
+(ns gd.P-1-1-2-01
   (:require [quil.core :as q]
             [quil.middleware :as m]))
 
@@ -43,7 +43,7 @@
     :5 (reset! segment-count 6)
     :s (save-image)
     :S (save-image)))
-
+(def sketch (atom nil))
 (q/defsketch sketch
   :title "P_1_1_2_01"
   :size [width height]

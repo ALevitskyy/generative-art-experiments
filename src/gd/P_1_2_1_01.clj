@@ -1,4 +1,4 @@
-(ns generative-design.P-1-2-1-01
+(ns gd.P-1-2-1-01
   (:require [quil.core :as q]
             [quil.middleware :as m]))
 
@@ -75,7 +75,7 @@
     :1 (reset! lerp-func q/lerp-color)
     :2 (reset! lerp-func lerpHSB)))
 
-
+(def sketch (atom nil))
 (q/defsketch sketch
   :title "P-1-1-1-01"
   :size [width height]

@@ -11,6 +11,8 @@
   (q/rect-mode :center)
   (q/no-stroke))
 
+(def sketch (atom nil))
+
 
 (def width 400)
 (def half-width (/ width 2))

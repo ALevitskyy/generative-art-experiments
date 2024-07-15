@@ -49,9 +49,10 @@
         (update :counter dec)
         (update :points #(mapv (:scaling-function state) %)))))
 
+(def sketch (atom nil))
 (defn run-sketch [] ;DELETE
-  (js/console.log "run-sketch2") ;DELETE
-  (q/defsketch heart
+  (js/console.log "run-sketch2") ;DELETE 
+  (q/defsketch sketch
     :host "sketch-canvas"
     :size [400 400]
     :setup setup
